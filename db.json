@@ -1,0 +1,80 @@
+{
+  "user": {
+    "id": "USR-001",
+    "firstName": "Mario",
+    "lastName": "Rossi",
+    "email": "mario.rossi@example.com",
+    "fiscalCode": "RSSMRA80A01H501Z",
+    "role": "CUSTOMER"
+  },
+  "accounts": [
+    {
+      "id": "ACC-001",
+      "name": "Conto Principale",
+      "type": "PRIVATE",
+      "balance": 12450.00,
+      "iban": "IT68D0300203280000400162854",
+      "lastUpdate": "2026-05-07T10:30:00Z"
+    },
+    {
+      "id": "ACC-002",
+      "name": "Conto Business",
+      "type": "BUSINESS",
+      "balance": 87320.50,
+      "iban": "IT60X0542811101000000123456",
+      "lastUpdate": "2026-05-07T09:15:00Z"
+    }
+  ],
+  "movements": [
+    {
+      "id": "MOV-001",
+      "accountId": "ACC-001",
+      "date": "2026-04-15",
+      "description": "Stipendio Aprile",
+      "amount": 2500.00,
+      "type": "CREDIT",
+      "category": "Lavoro"
+    },
+    {
+      "id": "MOV-002",
+      "accountId": "ACC-001",
+      "date": "2026-04-16",
+      "description": "Affitto Aprile",
+      "amount": -850.00,
+      "type": "DEBIT",
+      "category": "Casa"
+    },
+    {
+      "id": "MOV-003",
+      "accountId": "ACC-001",
+      "date": "2026-04-20",
+      "description": "Spesa supermercato",
+      "amount": -127.45,
+      "type": "DEBIT",
+      "category": "Spese"
+    },
+    {
+      "id": "MOV-004",
+      "accountId": "ACC-002",
+      "date": "2026-04-22",
+      "description": "Fattura cliente Verdi SRL",
+      "amount": 4200.00,
+      "type": "CREDIT",
+      "category": "Lavoro"
+    },
+    {
+      "id": "MOV-005",
+      "accountId": "ACC-002",
+      "date": "2026-04-25",
+      "description": "Pagamento fornitore Bianchi SPA",
+      "amount": -1850.00,
+      "type": "DEBIT",
+      "category": "Lavoro"
+    }
+  ],
+  "branches": [
+    { "id": "BR-001", "name": "Filiale Milano Centro", "city": "Milano", "address": "Via Roma 1" },
+    { "id": "BR-002", "name": "Filiale Roma EUR", "city": "Roma", "address": "Viale Europa 100" },
+    { "id": "BR-003", "name": "Filiale Torino Crocetta", "city": "Torino", "address": "Corso Re Umberto 50" }
+  ]
+}

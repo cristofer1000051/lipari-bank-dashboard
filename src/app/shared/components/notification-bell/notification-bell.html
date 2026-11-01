@@ -1,0 +1,6 @@
+@if(unreadCountValue() > 0) {
+<button type="button" class="notification-bell" (click)="onBellClick()">
+    <span class="bell-icon">🔔</span>
+    <span>{{unreadCountValue()}}</span>
+</button>
+}

@@ -1,0 +1,28 @@
+    <section class="ticker">
+      <header class="ticker__head">
+        <h3>Ticker Investimenti</h3>
+        <input
+          [ngModel]="filter()"
+          (ngModelChange)="onFilterChange($event)"
+          placeholder="Cerca simbolo (es. ENI)"
+        />
+        <label>
+          <input type="checkbox" [ngModel]="onlyMovers()" (ngModelChange)="onlyMovers.set($event)" />
+          Solo titoli in movimento
+        </label>
+      </header>
+
+      @if (ticker.hasError()) {
+        <p class="ticker__error">⚠ {{ ticker.lastError() }}</p>
+      }
+
+      <ul class="ticker__list">
+        @for (p of viewModel(); track p.symbol) {
+          <li [class.is-up]="p.delta > 0" [class.is-down]="p.delta < 0">
+            <strong>{{ p.symbol }}</strong>
+            <span>€ {{ p.price }}</span>
+            <span class="delta">{{ p.delta > 0 ? '+' : '' }}{{ p.delta }}</span>
+          </li>
+        }
+      </ul>
+    </section>
